@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Read Text File</title>
+    </head>
+
+    <body>
+        <input type="file" name="inputfile"
+            id="inputfile">
+        <button onclick="cprint()">Print</button>
+        <button onclick="setOs()">Get OS</button>
+        <br>
+        <form onSubmit="WriteToFile(this)">
+            <label>Type your first name:</label>
+            <input type="text" name="FirstName" id="firstName" size="20">
+            <label>Type your last name: </abel>
+            <input type="text" name="LastName" id="lastName" size="20">
+            <input type="submit" value="submit">
+        </form>
+        <br>
+
+        <iframe id="output" class="page"></iframe>
+
+        <script src="app.js"></script>
+        <style type="text/css" media="print">
+            @page 
+            {
+                size: auto;   /* auto is the current printer page size */
+                margin: 0mm;  /* this affects the margin in the printer settings */
+            }
+    
+            body 
+            {
+                background-color:#FFFFFF; 
+                border: solid 1px black ;
+                margin: 0px;  /* the margin on the content before printing */
+           }
+        </style>
+    </body>
+    
+
+</html>
